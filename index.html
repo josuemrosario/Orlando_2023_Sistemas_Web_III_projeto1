@@ -10,25 +10,26 @@
 
     <script>
 
-        anoNasc = window.prompt('seu ano de nascimento')
-        anoNascMae = window.prompt('Ano de nascimento da sua mae')
+        anoNasc = window.prompt('seu ano de nascimento',1979)
+        anoNascMae = window.prompt('Ano de nascimento da sua mae',1958)
 
 
         meuNome = 'josue micaroni do rosario'
         idade = 2023-anoNasc
-
-        maiorIdade = idade>18
         
-
-
 
         nomeMae = 'Celia Regina'
         idadeMae = 2023-anoNascMae
+        maeMaiorIdade = idadeMae > 18
 
 
-        console.log(`Meu nome e ${meuNome} e eu tenho ${idade} sou filho de  ${nomeMae} que tem ${idadeMae} + 'ano`)
-        console.log(`Maior de idade : ${maiorIdade}`)
-        
+        console.log(`Nome : ${meuNome}`)
+        console.log(`Idade : ${idade} `)
+        console.log(`Maior de Idade : ${ idade > 18 ? 'sim':'nao' }`)
+        console.log('')
+        console.log(`Nome Mae : ${nomeMae}`)
+        console.log(`Idade : ${idadeMae}`)
+        console.log(`Maior de Idade : ${maeMaiorIdade}`)
 
 
     </script>
