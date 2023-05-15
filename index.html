@@ -10,37 +10,48 @@
 
     <script>
 
-        var dataAtual = new Date();
-        var anoAtual = dataAtual.getFullYear();
 
+        const euMesmo = {
+            nome: 'josue micaroni do rosario',
+            anoNasc: 0
+        }
 
-        anoNasc = window.prompt('seu ano de nascimento',1979)
-        anoNascMae = window.prompt('Ano de nascimento da sua mae',1958)
+        euMesmo.anoNasc = window.prompt('Seu ano de Nascimento',1979)
+        idade = calculaIdade(euMesmo.anoNasc)
 
+        const minhaMae = {
+            nome: 'Celia Regina',
+            anoNasc: 0
+        }
 
-        meuNome = 'josue micaroni do rosario'
-        idade = calculaIdade(anoNasc)
-
-        
-
-        nomeMae = 'Celia Regina'
-        idadeMae = calculaIdade(anoNascMae)
+        minhaMae.anoNasc = window.prompt('Ano de nascimento da sua mae',1958)
+        idadeMae = calculaIdade(minhaMae.anoNasc)
         maeMaiorIdade = idadeMae > 18
 
 
-        console.log(`Nome : ${meuNome}`)
+        console.log(`Nome : ${euMesmo.nome}`)
         console.log(`Idade : ${idade + (idade > 1 ? ' anos':' ano') } `)
         console.log(`Maior de Idade : ${ idade > 18 ? 'sim':'nao' }`)
+        console.log(`Pode Aposentar : ${ idade > 65 ? ' pode':' nao pode' }`)
         console.log('')
-        console.log(`Nome Mae : ${nomeMae}`)
-        console.log(`Idade : ${idadeMae + (idadeMae >1 ? ' anos':'ano')}`)
+        console.log(`Nome Mae : ${minhaMae.nome}`)
+        console.log(`Idade : ${idadeMae + (idadeMae >1 ? ' anos':' ano')}`)
         console.log(`Maior de Idade : ${ idadeMae > 18 ? 'sim':'nao'}`)
+        console.log(`Pode Aposentar : ${ idadeMae > 65 ? ' pode':' nao pode' }`)
 
-        
-        function calculaIdade(anoNascimento){ 
-            
-            return 2023 - anoNascimento
+        class Pessoa{
+            constructor(nome,anoNasc) {
+                this.nome = nome
+                this.anoNasc = anoNasc
+            }
+            calculaIdade(anoNascimento){ 
+                var dataAtual = new Date();
+                var anoAtual = dataAtual.getFullYear();
+                return anoAtual - anoNascimento'
+            }
+
         }
+
 
 
 
